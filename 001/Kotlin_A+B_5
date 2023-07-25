@@ -1,0 +1,20 @@
+import java.util.Scanner
+
+fun sumAB(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    try {
+        val scanner = Scanner(System.`in`)
+        print("Ingresa el primer número: ")
+        val num1 = scanner.nextInt()
+        print("Ingresa el segundo número: ")
+        val num2 = scanner.nextInt()
+
+        val resultado = sumAB(num1, num2)
+        println("La suma de $num1 y $num2 es: $resultado")
+    } catch (e: Exception) {
+        println("Error: Ingresa números válidos.")
+    }
+}

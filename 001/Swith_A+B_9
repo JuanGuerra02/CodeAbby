@@ -1,0 +1,28 @@
+import Foundation
+
+func sumAB(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+
+func main() {
+    do {
+        print("Enter the first number: ", terminator: "")
+        guard let input1 = readLine(), let num1 = Int(input1) else {
+            print("Error: Enter valid numbers.")
+            return
+        }
+        
+        print("Enter the second number: ", terminator: "")
+        guard let input2 = readLine(), let num2 = Int(input2) else {
+            print("Error: Enter valid numbers.")
+            return
+        }
+
+        let result = sumAB(num1, num2)
+        print("The sum of \(num1) and \(num2) is: \(result)")
+    } catch {
+        print("Error: Enter valid numbers.")
+    }
+}
+
+main()

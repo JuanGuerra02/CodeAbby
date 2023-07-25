@@ -1,0 +1,32 @@
+function sumAB(a: number, b: number): number {
+  return a + b;
+}
+
+function main() {
+  try {
+    const readline = require('readline');
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    rl.question("Enter the first number: ", (num1: string) => {
+      rl.question("Enter the second number: ", (num2: string) => {
+        const parsedNum1 = parseInt(num1);
+        const parsedNum2 = parseInt(num2);
+
+        if (!isNaN(parsedNum1) && !isNaN(parsedNum2)) {
+          const result = sumAB(parsedNum1, parsedNum2);
+          console.log(`The sum of ${parsedNum1} and ${parsedNum2} is: ${result}`);
+        } else {
+          console.log("Error: Enter valid numbers.");
+        }
+        rl.close();
+      });
+    });
+  } catch (e) {
+    console.log("Error: Enter valid numbers.");
+  }
+}
+
+main();

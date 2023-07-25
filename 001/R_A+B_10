@@ -1,0 +1,20 @@
+sumAB <- function(a, b) {
+  return(a + b)
+}
+
+main <- function() {
+  cat("Enter the first number: ")
+  num1 <- as.numeric(readline())
+  
+  cat("Enter the second number: ")
+  num2 <- as.numeric(readline())
+  
+  if (!is.na(num1) && !is.na(num2)) {
+    result <- sumAB(num1, num2)
+    cat("The sum of", num1, "and", num2, "is:", result, "\n")
+  } else {
+    cat("Error: Enter valid numbers.\n")
+  }
+}
+
+main()
